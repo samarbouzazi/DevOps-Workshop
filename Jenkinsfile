@@ -36,17 +36,6 @@ pipeline {
         echo "Target branch name: ${targetBranch}"
       }
     }
-    
-    stage('Send Email') {
-    steps {
-        emailext (
-            subject: "Nouveau commit sur GitHub",
-            body: "Voici le contenu du fichier README.txt :\n\n${readFile('README.txt')}",
-            to: 'samar.bouzezi@esprit.tn',
-            attachLog: true,
-        )
-    }
-}
 
 }
 }
