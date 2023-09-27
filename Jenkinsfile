@@ -7,16 +7,9 @@ pipeline {
             }
         }
         
-        stage('Send Email') {
+        stage('Build') {
             steps {
-                script {
-                    def readmeContent = readFile('README.txt')
-                    emailext(
-                        subject: "New Commit in my-project",
-                        body: "A new commit has been made to the my-project repository",
-                        to: 'samar.bouzezi@esprit.tn'
-                    )
-                }
+                echo "build success"
             }
         }
     }
