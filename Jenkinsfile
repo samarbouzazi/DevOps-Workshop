@@ -13,7 +13,7 @@ pipeline {
                     emailext(
                         subject: "New Commit in my-project",
                         body: "A new commit has been made to the my-project repository. Check it out!\n\n${readmeContent}",
-                        to: 'x@gmail.com',
+                        to: 'x@gmail.com'
                     )
                 }
             }
