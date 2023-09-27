@@ -41,8 +41,7 @@
 //     stage('Send Email') {
 //     steps {
 //       script {
-//       def fileContent = sh(script: 'cat /var/lib/jenkins/workspace/DevOpsWorkshop__main/README.txt', returnStdout: true).trim()
-      
+//       def fileContent = sh(script: 'cat /var/lib/jenkins/workspace/DevOpsWorkshop__main/README.txt', returnStdout: true).trim()  
 //         emailext (
 //             subject: "Nouveau commit sur GitHub",
 //             body: "Voici le contenu du fichier README.txt :\n\n${readFile('README.txt')}",
@@ -52,10 +51,8 @@
 //     }
 //     }
 // }
-
 // }
 // }
-
 pipeline {
     agent any
     stages {
