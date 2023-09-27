@@ -6,6 +6,7 @@ pipeline {
                 checkout scm
             }
         }
+        
         stage('Send Email') {
             steps {
                 script {
