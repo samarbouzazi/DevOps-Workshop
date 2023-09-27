@@ -34,8 +34,20 @@ pipeline {
           credentialsId: 'githubid'
         echo "Current branch name: ${branchName}"
         echo "Target branch name: ${targetBranch}"
+        checkout scm
       }
     }
+    
+    stage('Send Email') {
+    steps {
+        emailext (
+            subject: "Nouveau commit sur GitHub",
+            body: "Voici le contenu du fichier README.txt :\n\n${readFile('README.txt')}",
+            to: 'samar.bouzezi@esprit.tn',
+            attachLog: true,
+        )
+    }
+}
 
 }
 }
