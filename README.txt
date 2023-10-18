@@ -1,4 +1,2 @@
 # DevOps-Workshop
-bonjour c'est le workshop jenkins 18/10/2023
-23:56 
-.
+bonjour c'est le workshop jenkins 19/10/2023
